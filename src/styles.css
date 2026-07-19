@@ -53,3 +53,12 @@ input, select {
   padding: 10px;
   border-radius: 6px;
 }
+
+.imagen-producto {
+  width: 100% !important;           /* Asegura que la imagen ocupe todo el ancho de la tarjeta */
+  height: 150px !important;         /* Define una altura fija para que todas las tarjetas sean uniformes */
+  object-fit: cover !important;     /* recorta la imagen sin deformarla para llenar el espacio definido */
+  border-radius: 4px !important;    /* redondea las esquinas */
+  margin-bottom: 10px !important;   /* espacio entre la imagen y el nombre del producto */
+  display: block;        /* Elimina espacios debajo de la imagen */
+}
