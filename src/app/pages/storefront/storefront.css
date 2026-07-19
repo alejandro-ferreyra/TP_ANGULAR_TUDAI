@@ -1,0 +1,37 @@
+.section-title {
+  font-weight: 300;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: var(--text-main);
+}
+
+.store-layout {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 30px;
+}
+
+.catalog {
+  width: 100%;
+}
+
+.sidebar {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .store-layout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .catalog {
+    flex: 3;
+  }
+
+  .sidebar {
+    flex: 1;
+    position: sticky;
+    top: 20px;
+  }
+}

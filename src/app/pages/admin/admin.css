@@ -1,0 +1,19 @@
+.admin-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+@media (min-width: 768px) {
+  .admin-layout {
+    flex-direction: row;
+  }
+
+  .form-section {
+    flex: 1;
+  }
+
+  .admin-list {
+    flex: 2;
+  }
+}

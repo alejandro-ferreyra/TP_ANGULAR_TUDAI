@@ -1,0 +1,16 @@
+<div class="product-grid">
+  <!-- Recorre la lista de productos recibida a través del @Input -->
+  @for (product of products; track product.id) {
+    <div class="product-card card">
+      <h3>{{ product.name }}</h3>
+      <p>{{ product.category }} | Talle: {{ product.size }}</p>
+      <p><strong>${{ product.price }}</strong></p>
+
+      <!-- Botón que agrega el producto al carrito -->
+      <button class="btn btn-checkout"(click)="buy.emit(product)">Agregar al carrito</button>
+    </div>
+  } @empty {
+    <!-- Mensaje que se muestra si la lista de productos está vacía -->
+    <p>Cargando catálogo o no hay productos.</p>
+  }
+</div>

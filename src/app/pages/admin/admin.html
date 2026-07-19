@@ -1,0 +1,16 @@
+<div class="admin-layout">
+  <div class="form-section">
+    <app-product-form (productCreated)="onAddProduct($event)"></app-product-form>
+  </div>
+  <div class="admin-list card">
+    <h3>Control de Inventario</h3>
+    <ul>
+      @for (prod of products; track prod.id) {
+        <li>
+          <span><strong>{{ prod.name }}</strong> (Talle: {{ prod.size }}) - \${{ prod.price }}</span>
+          <button class="btn btn-delete" (click)="onDelete(prod.id!)">Borrar</button>
+        </li>
+      }
+    </ul>
+  </div>
+</div>

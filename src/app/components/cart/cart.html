@@ -1,0 +1,22 @@
+<div class="cart-box card">
+  <h3>🛒 Carrito de Compras</h3>
+  @if (cartItems.length === 0) {
+    <p class="empty">Tu carrito está vacío.</p>
+  } @else {
+    <ul>
+      @for (item of cartItems; track item.id) {
+        <li>
+          <div class="item-info">
+            <strong>{{ item.name }}</strong>
+            <span>{{ item.quantity }} x ${{ item.price }} = ${{ (item.price * item.quantity) | number:'1.2-2' }}</span>
+          </div>
+          <button class="btn btn-remove" (click)="remove.emit($index)">X</button>
+        </li>
+      }
+    </ul>
+    <div class="total">
+      <strong>TOTAL:</strong> <span>${{ getTotal() | number:'1.2-2' }}</span>
+    </div>
+    <button class="btn btn-checkout" (click)="checkout.emit()">Finalizar Compra</button>
+  }
+</div>

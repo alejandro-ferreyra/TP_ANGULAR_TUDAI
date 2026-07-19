@@ -1,0 +1,22 @@
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()" class="form-container card">
+  <h3>Agregar al Inventario</h3>
+
+  <input type="text" formControlName="name" placeholder="Ej. Botines Ombú">
+  @if (productForm.get('name')?.invalid && productForm.get('name')?.touched) {
+    <span class="error">El nombre es requerido.</span>
+  }
+
+  <input type="number" formControlName="price" placeholder="Precio ($)">
+
+  <select formControlName="category">
+    <option value="" disabled selected>Categoría</option>
+    <option value="Calzado de Seguridad">Calzado de Seguridad</option>
+    <option value="Ropa de Trabajo">Ropa de Trabajo</option>
+    <option value="Protección">Protección para manos</option>
+  </select>
+
+  <input type="text" formControlName="size" placeholder="Talle (Ej. 42, L)">
+  <input type="text" formControlName="imageUrl" placeholder="URL de la imagen (Opcional)">
+
+  <button type="submit" [disabled]="productForm.invalid" class="btn btn-submit">Guardar Producto</button>
+</form>

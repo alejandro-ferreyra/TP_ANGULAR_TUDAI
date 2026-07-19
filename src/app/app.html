@@ -1,0 +1,17 @@
+<div class="app-wrapper" [attr.data-theme]="isDarkMode ? 'dark' : 'light'">
+  <nav class="navbar">
+    <h2 class="logo">SEGURIDAD INDUSTRIAL</h2>
+    <div class="links">
+      <a routerLink="/">Catálogo</a>
+      <a routerLink="/admin">Administración</a>
+      <!-- SWITCH DARKMODE -->
+      <label class="switch">
+        <input type="checkbox" [checked]="isDarkMode" (change)="toggleTheme()">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </nav>
+  <main class="content">
+    <router-outlet></router-outlet>
+  </main>
+</div>

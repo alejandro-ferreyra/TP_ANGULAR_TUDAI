@@ -1,0 +1,20 @@
+<div class="store-layout">
+  <div class="catalog">
+    <h2 class="section-title">Listado de Productos</h2>
+
+    <!-- Componente del catalogo -->
+    <app-product-list
+      [products]="catalog()"
+      (buy)="addToCart($event)">
+    </app-product-list>
+  </div>
+
+  <div class="sidebar">
+    <!-- Componente del carrito -->
+    <app-cart
+      [cartItems]="cart()"
+      (remove)="removeFromCart($event)"
+      (checkout)="processOrder()">
+    </app-cart>
+  </div>
+</div>

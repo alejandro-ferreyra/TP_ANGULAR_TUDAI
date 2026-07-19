@@ -1,0 +1,55 @@
+:root {
+  --bg-main: #f3f4f6;
+  --bg-nav: #ffffff;
+  --text-main: #1f2937;
+  --text-nav: #374151;
+  --border-color: #e5e7eb;
+  --card-btn-bg: #212529;
+  --card-btn-text: #ffffff;
+}
+
+[data-theme="dark"] {
+  --bg-main: #373737;
+  --bg-nav: #222222;
+  --text-main: #f9fafb;
+  --text-nav: #e5e7eb;
+  --border-color: #444444;
+
+}
+
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background-color: var(--bg-main); font-family: 'Segoe UI', sans-serif; }
+
+
+.card {
+  background: var(--bg-nav);
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 15px;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.btn-checkout { background: var(--card-btn-bg); color: var(--card-btn-text); }
+.btn-remove { background: #ef4444; color: white; }
+.btn-submit { background: var(--card-btn-bg); color: var(--card-btn-text); }
+
+ul { list-style: none; padding: 0; }
+li { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--border-color); }
+
+input, select {
+  background: var(--bg-main);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  border-radius: 6px;
+}
