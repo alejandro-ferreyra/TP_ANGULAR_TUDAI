@@ -2,6 +2,9 @@
   <!-- Recorre la lista de productos recibida a través del @Input -->
   @for (product of products; track product.id) {
     <div class="product-card card">
+      @if (product.imageUrl) {
+        <img [src]="product.imageUrl" [alt]="product.name" class="imagen-producto">
+      }
       <h3>{{ product.name }}</h3>
       <p>{{ product.category }} | Talle: {{ product.size }}</p>
       <p><strong>${{ product.price }}</strong></p>
