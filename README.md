@@ -1,5 +1,5 @@
 ## TEMATICA DEL PROYECTO 
- # Tienda de Ropa y Clazado de Seguridad 
+ # Tienda de Ropa y Calzado de Seguridad 
 
 
 ## Información del Alumno
