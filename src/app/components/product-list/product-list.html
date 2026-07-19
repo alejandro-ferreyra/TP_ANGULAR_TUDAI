@@ -4,6 +4,9 @@
     <div class="product-card card">
       @if (product.imageUrl) {
         <img [src]="product.imageUrl" [alt]="product.name" class="imagen-producto">
+      } @else {
+        <!-- Imagen por defecto si no encuentra la imagen -->
+        <img src="assets/placeholder.jpg" alt="Sin imagen" class="imagen-producto">
       }
       <h3>{{ product.name }}</h3>
       <p>{{ product.category }} | Talle: {{ product.size }}</p>
