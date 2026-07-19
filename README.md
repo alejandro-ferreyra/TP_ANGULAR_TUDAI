@@ -8,4 +8,4 @@
 # | **Email** | alferreyra@alumnos.exa.unicen.edu.ar |
 # | **Sede** | Las Flores |
 
-![SreenSshot](Screenshot 2026-07-19 152607.png)
+![ScreenShoot](Screenshot.png)
